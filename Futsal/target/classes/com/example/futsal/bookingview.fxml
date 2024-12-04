@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="15" style="-fx-padding: 20; -fx-background-color: #E8F5E9;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="com.example.futsal.BookingViewController">
+
+    <!-- Booking Table -->
+    <Label style="-fx-font-size: 22; -fx-font-weight: bold;" text="Booking Table" />
+
+    <TableView fx:id="bookingTable" prefHeight="300" prefWidth="550.0" style="-fx-margin-top: 20;">
+        <columns>
+            <TableColumn fx:id="nameColumn" prefWidth="150" text="Name" />
+            <TableColumn fx:id="dateColumn" prefWidth="100" text="Date" />
+            <TableColumn fx:id="timeColumn" prefWidth="100" text="Time" />
+            <TableColumn fx:id="courtTypeColumn" prefWidth="100" text="Court Type" />
+            <TableColumn fx:id="paymentColumn" prefWidth="100" text="Payment" />
+        </columns>
+    </TableView>
+
+    <!-- Back Button -->
+    <Button onAction="#handleBackButton" style="-fx-font-size: 16; -fx-padding: 10; -fx-background-color: #81C784; -fx-text-fill: white;" text="Back" />
+</VBox>

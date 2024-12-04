@@ -1,0 +1,47 @@
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.futsal.MainController" style="-fx-background-color: #E8F5E9;">
+
+    <!-- Top Menu Bar -->
+    <top>
+        <MenuBar style="-fx-background-color: #00695C;">
+            <Menu text="Setting" style="-fx-text-fill: white;">
+                <MenuItem text="Exit" onAction="#handleExit"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <!-- Sidebar Menu -->
+    <left>
+        <VBox spacing="15" style="-fx-background-color: #00796B; -fx-padding: 20px;" prefWidth="200">
+            <Label text="Dashboard" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+            <Button text="View Bookings" onAction="#handleViewBookings" styleClass="sidebar-button"/>
+            <Button text="Manage Profile" onAction="#handleManageProfile" styleClass="sidebar-button"/>
+        </VBox>
+    </left>
+
+    <!-- Main Content Area -->
+    <center>
+        <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20px;">
+            <Label text="Welcome to the Futsal Booking System!" style="-fx-font-size: 20px; -fx-text-fill: #004D40; -fx-font-weight: bold;"/>
+            <Label text="Select an option from the sidebar to get started." style="-fx-font-size: 14px; -fx-text-fill: #00796B;"/>
+            <Button text="Book a Court" onAction="#handleBookCourt" styleClass="main-button"/>
+        </VBox>
+    </center>
+
+    <!-- Footer -->
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-padding: 10px; -fx-background-color: #004D40;">
+            <Label text="© 2024 Futsal Booking System" style="-fx-text-fill: white; -fx-font-size: 12px;"/>
+        </HBox>
+    </bottom>
+</BorderPane>

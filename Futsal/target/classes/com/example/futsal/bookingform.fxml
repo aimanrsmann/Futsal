@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<VBox spacing="15" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.futsal.BookingController"
+      style="-fx-padding: 20; -fx-background-color: #E8F5E9;">
+
+    <!-- Form -->
+    <Label text="Booking Form" style="-fx-font-size: 22; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="10" vgap="10" style="-fx-background-color: #FFFFFF; -fx-padding: 10;">
+        <!-- Name field -->
+        <Label text="Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="nameField" promptText="Enter Name" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <!-- Date field -->
+        <Label text="Date:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="dateField" promptText="Enter Date (YYYY-MM-DD)" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <!-- Time field -->
+        <Label text="Time:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="timeField" promptText="Enter Time (HH:MM:SS)" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <!-- Court Type field -->
+        <Label text="Court Type:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="courtTypeField" promptText="Enter Court Type (Half Court/FIFA Court)" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <!-- Payment Method field -->
+        <Label text="Payment Method:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="paymentField" promptText="Enter Payment Method (Cash/Online Transfer)" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <!-- Submit Button -->
+    <Button text="Submit Booking" onAction="#submitBooking"
+            style="-fx-padding: 10; -fx-background-color: #00796B; -fx-text-fill: white;"/>
+</VBox>
